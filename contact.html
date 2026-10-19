@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - Binge Barn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+
+<header class="nav">
+  <a class="logo" href="index.html">Binge Barn</a>
+  <nav aria-label="Main">
+    <a href="genre.html?g=Action">Action</a>
+    <a href="genre.html?g=Adventure">Adventure</a>
+    <a href="genre.html?g=Fantasy">Fantasy</a>
+    <a href="genre.html?g=Drama">Drama</a>
+    <a href="genre.html?g=Sci-Fi">Sci-Fi</a>
+    <a href="genre.html?g=Supernatural">Supernatural</a>
+    <a href="saved.html">My List</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <form class="search" role="search">
+    <input type="search" placeholder="Search anime" aria-label="Search anime">
+  </form>
+  <a class="btn btn-red small" href="auth.html" id="authLink">Sign in</a>
+</header>
+
+<main class="page contact">
+  <h1>Contact Us</h1>
+  <p class="page-sub">Questions, requests for an anime, or feedback about Binge Barn? Reach out any way you like.</p>
+
+  <ul class="contact-cards">
+    <li>
+      <a class="contact-card" href="https://wa.me/2348136985204" target="_blank" rel="noopener">
+        <span class="cc-badge" aria-hidden="true">W</span>
+        <span class="cc-body"><strong>WhatsApp</strong><small>0813 698 5204</small></span>
+      </a>
+    </li>
+    <li>
+      <a class="contact-card" href="mailto:ayodelenathaniel2010@gmail.com">
+        <span class="cc-badge" aria-hidden="true">@</span>
+        <span class="cc-body"><strong>Email</strong><small>ayodelenathaniel2010@gmail.com</small></span>
+      </a>
+    </li>
+    <li>
+      <a class="contact-card" href="https://www.tiktok.com/@theholyone...shadow" target="_blank" rel="noopener">
+        <span class="cc-badge" aria-hidden="true">T</span>
+        <span class="cc-body"><strong>TikTok</strong><small>@theholyone...shadow</small></span>
+      </a>
+    </li>
+  </ul>
+
+  <section class="contact-form" aria-labelledby="formTitle">
+    <h2 id="formTitle">Send a message</h2>
+    <form id="contactForm" novalidate>
+      <label>Your name
+        <input name="name" type="text" autocomplete="name">
+      </label>
+      <label>Message
+        <textarea name="message" rows="5" placeholder="Tell us what you need, or which anime you want added"></textarea>
+      </label>
+      <p class="form-msg" id="contactMsg" role="alert"></p>
+      <div class="hero-actions">
+        <button class="btn btn-red" type="button" id="sendWa">Send on WhatsApp</button>
+        <button class="btn btn-ghost" type="button" id="sendMail">Send by email</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="auth.js"></script>
+<script src="saved.js"></script>
+<script src="search.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

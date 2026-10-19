@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trailer helper - Binge Barn</title><link rel="stylesheet" href="style.css">
+<style>body{padding:40px var(--gutter);max-width:820px;margin:auto}li{display:flex;gap:14px;justify-content:space-between;padding:10px 0;border-bottom:1px solid #222;list-style:none}.ok{color:#6fdc8c}.no{color:var(--grey)}a.find{color:var(--red);font-weight:700}</style></head>
+<body>
+<h1 class="logo">Trailer helper</h1>
+<p style="margin:12px 0 20px;color:var(--grey)">Click Find trailer, open the official trailer on YouTube, copy the ID after <b>v=</b> in its link, and paste it into <b>data.js</b> as <b>trailer:"ID"</b> for that anime.</p>
+<ul id="list"></ul>
+<script src="data.js"></script>
+<script>
+ANIME.forEach(x=>{const li=document.createElement('li');
+const t=document.createElement('span');t.textContent=x.title+' ';
+const s=document.createElement('span');s.className=x.trailer?'ok':'no';s.textContent=x.trailer?'(trailer set)':'(no trailer yet)';t.append(s);
+const a=document.createElement('a');a.className='find';a.target='_blank';a.rel='noopener';
+a.href='https://www.youtube.com/results?search_query='+encodeURIComponent(x.title+' official trailer');a.textContent='Find trailer';
+li.append(t,a);document.getElementById('list').append(li);});
+</script></body></html>

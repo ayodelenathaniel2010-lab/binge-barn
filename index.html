@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Binge Barn - Anime Streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="#">Binge Barn</a>
+  <nav aria-label="Main">
+    <a href="genre.html?g=Action">Action</a>
+    <a href="genre.html?g=Adventure">Adventure</a>
+    <a href="genre.html?g=Fantasy">Fantasy</a>
+    <a href="genre.html?g=Drama">Drama</a>
+    <a href="genre.html?g=Sci-Fi">Sci-Fi</a>
+    <a href="genre.html?g=Supernatural">Supernatural</a>
+    <a href="saved.html">My List</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <form class="search" role="search">
+    <input type="search" placeholder="Search anime" aria-label="Search anime">
+  </form>
+  <a class="btn btn-red small" href="auth.html" id="authLink">Sign in</a>
+</header>
+
+<main>
+  <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Featured anime trailers">
+    <div class="hero-media" id="heroMedia"></div>
+    <div class="hero-text">
+      <p class="hero-tag">Now playing</p>
+      <h1 id="heroTitle">Binge Barn</h1>
+      <p class="hero-meta" id="heroMeta"></p>
+      <p class="hero-desc" id="heroDesc"></p>
+      <div class="hero-actions">
+        <button class="btn btn-red" id="heroPlay" type="button" data-trailer="">&#9654; Play Trailer</button>
+        <button class="btn btn-ghost" id="heroInfo" type="button" data-info="">More info</button>
+        <button class="btn btn-ghost" id="heroSave" type="button" data-save="">+ My List</button>
+      </div>
+    </div>
+    <button class="hero-sound" id="heroMute" type="button">Sound off</button>
+    <ol class="hero-picks" id="heroPicks" aria-label="Choose a trailer"></ol>
+  </section>
+
+  <section class="row" id="top-rated">
+    <h2>Top Rated on Binge Barn</h2>
+    <ol class="track ranked-track">
+      <li class="ranked"><span class="rank" aria-hidden="true">1</span><a class="card" href="player.html?id=frieren" style="--a:#7a0c0c;--b:#14090a"><strong>Frieren: Beyond Journey's End</strong><span class="score">★ 9.3</span></a></li>
+      <li class="ranked"><span class="rank" aria-hidden="true">2</span><a class="card" href="player.html?id=fmab" style="--a:#a11a1a;--b:#0d0d12"><strong>Fullmetal Alchemist: Brotherhood</strong><span class="score">★ 9.1</span></a></li>
+      <li class="ranked"><span class="rank" aria-hidden="true">3</span><a class="card" href="player.html?id=steinsgate" style="--a:#5c1020;--b:#0a0a0a"><strong>Steins;Gate</strong><span class="score">★ 9.1</span></a></li>
+      <li class="ranked"><span class="rank" aria-hidden="true">4</span><a class="card" href="player.html?id=hxh" style="--a:#8c2a0f;--b:#120805"><strong>Hunter x Hunter</strong><span class="score">★ 9.0</span></a></li>
+      <li class="ranked"><span class="rank" aria-hidden="true">5</span><a class="card" href="player.html?id=aot" style="--a:#6b0f2e;--b:#0b0608"><strong>Attack on Titan</strong><span class="score">★ 9.0</span></a></li>
+      <li class="ranked"><span class="rank" aria-hidden="true">6</span><a class="card" href="player.html?id=gintama" style="--a:#992214;--b:#0c0c0c"><strong>Gintama</strong><span class="score">★ 8.9</span></a></li>
+      <li class="ranked"><span class="rank" aria-hidden="true">7</span><a class="card" href="player.html?id=bebop" style="--a:#7d1111;--b:#10060a"><strong>Cowboy Bebop</strong><span class="score">★ 8.8</span></a></li>
+    </ol>
+  </section>
+
+  <section class="row" id="trending">
+    <h2>Trending Now</h2>
+    <ul class="track">
+      <li><a class="card" href="player.html?id=jjk" style="--a:#b3201a;--b:#0a0a0a"><strong>Jujutsu Kaisen</strong><span class="score">★ 8.7</span></a></li>
+      <li><a class="card" href="player.html?id=demonslayer" style="--a:#8a1530;--b:#0d0709"><strong>Demon Slayer</strong><span class="score">★ 8.4</span></a></li>
+      <li><a class="card" href="player.html?id=onepiece" style="--a:#a32a0c;--b:#0b0705"><strong>One Piece</strong><span class="score">★ 8.7</span></a></li>
+      <li><a class="card" href="player.html?id=chainsawman" style="--a:#6e0d17;--b:#0a0a0c"><strong>Chainsaw Man</strong><span class="score">★ 8.5</span></a></li>
+      <li><a class="card" href="player.html?id=spyxfamily" style="--a:#9c1c3a;--b:#0c0608"><strong>Spy x Family</strong><span class="score">★ 8.6</span></a></li>
+      <li><a class="card" href="player.html?id=vinland" style="--a:#781010;--b:#0e0e0e"><strong>Vinland Saga</strong><span class="score">★ 8.7</span></a></li>
+      <li><a class="card" href="player.html?id=mha" style="--a:#a8301c;--b:#100806"><strong>My Hero Academia</strong><span class="score">★ 8.0</span></a></li>
+    </ul>
+  </section>
+
+  <section class="row" id="action">
+    <h2>Action and Adventure</h2>
+    <ul class="track">
+      <li><a class="card" href="player.html?id=naruto" style="--a:#8f1a1a;--b:#0a0a0a"><strong>Naruto Shippuden</strong><span class="score">★ 8.3</span></a></li>
+      <li><a class="card" href="player.html?id=codegeass" style="--a:#701030;--b:#0b0608"><strong>Code Geass</strong><span class="score">★ 8.7</span></a></li>
+      <li><a class="card" href="player.html?id=bleach" style="--a:#b02a14;--b:#0d0705"><strong>Bleach</strong><span class="score">★ 8.0</span></a></li>
+      <li><a class="card" href="player.html?id=deathnote" style="--a:#7a1414;--b:#0c0c0e"><strong>Death Note</strong><span class="score">★ 8.6</span></a></li>
+      <li><a class="card" href="player.html?id=violet" style="--a:#9a1f2f;--b:#0a0608"><strong>Violet Evergarden</strong><span class="score">★ 8.5</span></a></li>
+      <li><a class="card" href="player.html?id=dbz" style="--a:#851808;--b:#0f0805"><strong>Dragon Ball Z</strong><span class="score">★ 8.2</span></a></li>
+    </ul>
+  </section>
+  <div id="moreRows"></div>
+</main>
+
+<footer class="footer">
+  <p class="logo">Binge Barn</p>
+  <p class="footer-links"><a href="contact.html">Contact us</a> <a href="https://wa.me/2348136985204" target="_blank" rel="noopener">WhatsApp</a> <a href="mailto:ayodelenathaniel2010@gmail.com">Email</a> <a href="https://www.tiktok.com/@theholyone...shadow" target="_blank" rel="noopener">TikTok</a></p>
+  <p>Ratings shown are sample values. Replace posters and ratings with your own licensed content.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="auth.js"></script>
+<script src="saved.js"></script>
+<script src="people.js"></script>
+<script src="info.js"></script>
+<script src="trailer.js"></script>
+<script src="previews.js"></script>
+<script src="search.js"></script>
+<script src="rows.js"></script>
+<script src="hero.js"></script>
+</body>
+</html>

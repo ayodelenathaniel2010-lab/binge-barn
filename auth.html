@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join Binge Barn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+<header class="nav">
+  <a class="logo" href="index.html">Binge Barn</a>
+</header>
+
+<main class="auth-box">
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-mode="signup" aria-selected="true">Sign up</button>
+    <button class="tab" role="tab" data-mode="signin" aria-selected="false">Sign in</button>
+  </div>
+  <form id="authForm" novalidate>
+    <label id="nameRow">Your name
+      <input name="name" type="text" autocomplete="name">
+    </label>
+    <label>Gmail address
+      <input name="email" type="email" placeholder="name@gmail.com" autocomplete="email" required>
+    </label>
+    <label>Password
+      <input name="password" type="password" autocomplete="current-password" required>
+    </label>
+    <p class="form-msg" id="authMsg" role="alert"></p>
+    <button class="btn btn-red" id="authSubmit" type="submit">Create account</button>
+  </form>
+  <p class="fine">Demo mode: accounts are saved only in this browser.</p>
+</main>
+
+<script src="auth.js"></script>
+</body>
+</html>

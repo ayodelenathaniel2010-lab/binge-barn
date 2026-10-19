@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch - Binge Barn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="index.html">Binge Barn</a>
+  <nav aria-label="Main">
+    <a href="genre.html?g=Action">Action</a>
+    <a href="genre.html?g=Adventure">Adventure</a>
+    <a href="genre.html?g=Fantasy">Fantasy</a>
+    <a href="genre.html?g=Drama">Drama</a>
+    <a href="genre.html?g=Sci-Fi">Sci-Fi</a>
+    <a href="genre.html?g=Supernatural">Supernatural</a>
+    <a href="saved.html">My List</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <form class="search" role="search">
+    <input type="search" placeholder="Search anime" aria-label="Search anime">
+  </form>
+  <a class="btn btn-red small" href="auth.html" id="authLink">Sign in</a>
+</header>
+
+<main class="watch">
+  <div class="stage-tabs" role="tablist" aria-label="What to watch">
+    <button class="stage-tab on" type="button" role="tab" data-mode="trailer" aria-selected="true">Trailer</button>
+    <button class="stage-tab" type="button" role="tab" data-mode="full" aria-selected="false">Watch full anime</button>
+  </div>
+  <div class="stage" id="stage">
+    <video id="video" controls playsinline hidden></video>
+    <span class="badge" id="badge"></span>
+    <button class="sound-hint" id="soundHint" hidden>Tap to turn sound on</button>
+    <div class="lock" id="lock" hidden>
+      <h2>Keep watching for free</h2>
+      <p>Create an account with your Gmail to watch the full anime.</p>
+      <div class="hero-actions">
+        <a class="btn btn-red" id="lockSignup" href="auth.html">Sign up with Gmail</a>
+        <a class="btn btn-ghost" id="lockSignin" href="auth.html">I have an account</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="details">
+    <h1 id="title"></h1>
+    <p class="meta"><span class="score" id="rating"></span> <span id="year"></span> <span id="genres"></span></p>
+    <p class="desc" id="desc"></p>
+    <p class="about" id="about" hidden></p>
+    <p class="facts" id="facts" hidden></p>
+    <p class="directed" id="directedBy" hidden></p>
+    <p class="detail-actions"><button class="btn btn-red" id="saveBtn" type="button" data-save="">+ My List</button> <button class="btn btn-ghost" id="infoBtn" type="button" data-info="">More info</button></p>
+    <p class="banner" id="banner">You're watching the trailer. <a id="bannerSignup" href="auth.html">Sign up with Gmail</a> to watch the full anime.</p>
+  </section>
+
+  <section class="people" id="people" aria-live="polite">
+    <p class="people-msg" id="peopleMsg">Loading cast and creators...</p>
+    <h2 id="castTitle">Cast</h2>
+    <ul class="cast-grid" id="castGrid"></ul>
+    <h2 id="staffTitle">Made by</h2>
+    <ul class="staff-grid" id="staffGrid"></ul>
+  </section>
+
+  <section class="comments" id="comments" aria-labelledby="commentsTitle">
+    <h2 id="commentsTitle">Comments</h2>
+    <div id="commentForm"></div>
+    <ul class="comment-list" id="commentList"></ul>
+  </section>
+
+  <section class="row more">
+    <h2>More like this</h2>
+    <ul class="track" id="suggestions"></ul>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="auth.js"></script>
+<script src="saved.js"></script>
+<script src="people.js"></script>
+<script src="info.js"></script>
+<script src="trailer.js"></script>
+<script src="player.js"></script>
+<script src="cast.js"></script>
+<script src="comments.js"></script>
+<script src="previews.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

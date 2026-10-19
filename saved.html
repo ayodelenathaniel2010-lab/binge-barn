@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My List - Binge Barn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="saved">
+
+<header class="nav">
+  <a class="logo" href="index.html">Binge Barn</a>
+  <nav aria-label="Main">
+    <a href="genre.html?g=Action">Action</a>
+    <a href="genre.html?g=Adventure">Adventure</a>
+    <a href="genre.html?g=Fantasy">Fantasy</a>
+    <a href="genre.html?g=Drama">Drama</a>
+    <a href="genre.html?g=Sci-Fi">Sci-Fi</a>
+    <a href="genre.html?g=Supernatural">Supernatural</a>
+    <a href="saved.html">My List</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <form class="search" role="search">
+    <input type="search" placeholder="Search anime" aria-label="Search anime">
+  </form>
+  <a class="btn btn-red small" href="auth.html" id="authLink">Sign in</a>
+</header>
+
+<main class="page">
+  <h1 id="pageTitle">My List</h1>
+  <p class="page-sub" id="pageSub">Anime you saved on this device.</p>
+  <p class="page-count" id="pageCount"></p>
+  <div class="page-empty" id="pageEmpty" hidden>
+    <p>Your list is empty. Open any anime and press + My List to save it here.</p>
+    <a class="btn btn-red" href="index.html">Browse anime</a>
+  </div>
+  <ul class="grid" id="grid"></ul>
+</main>
+
+<script src="data.js"></script>
+<script src="auth.js"></script>
+<script src="saved.js"></script>
+<script src="people.js"></script>
+<script src="info.js"></script>
+<script src="trailer.js"></script>
+<script src="previews.js"></script>
+<script src="search.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>
